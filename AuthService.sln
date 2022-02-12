@@ -5,9 +5,13 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AuthService", "AuthService", "{93BD32C2-E051-4247-826B-C7D10FADE2F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthService", "AuthService\AuthService\AuthService.csproj", "{A4667AF0-DEFE-453E-9E23-66C502AE92D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthService", "AuthService\AuthService\AuthService.csproj", "{A4667AF0-DEFE-453E-9E23-66C502AE92D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthService.Infrastructure", "AuthService\AuthService.Infrastructure\AuthService.Infrastructure.csproj", "{C8D903E4-01FC-4C69-84E8-1C6DD297ED2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthService.Infrastructure", "AuthService\AuthService.Infrastructure\AuthService.Infrastructure.csproj", "{C8D903E4-01FC-4C69-84E8-1C6DD297ED2F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GatewayOcelot", "GatewayOcelot", "{1352B368-A9C1-44BB-8CAB-5399A7E07337}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GatewayOcelot", "..\GatewayOcelot\GatewayOcelot\GatewayOcelot.csproj", "{E4499BB4-66BD-4529-9E85-A0C04FA3E400}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +27,10 @@ Global
 		{C8D903E4-01FC-4C69-84E8-1C6DD297ED2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8D903E4-01FC-4C69-84E8-1C6DD297ED2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8D903E4-01FC-4C69-84E8-1C6DD297ED2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4499BB4-66BD-4529-9E85-A0C04FA3E400}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4499BB4-66BD-4529-9E85-A0C04FA3E400}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4499BB4-66BD-4529-9E85-A0C04FA3E400}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4499BB4-66BD-4529-9E85-A0C04FA3E400}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,6 +38,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{A4667AF0-DEFE-453E-9E23-66C502AE92D1} = {93BD32C2-E051-4247-826B-C7D10FADE2F9}
 		{C8D903E4-01FC-4C69-84E8-1C6DD297ED2F} = {93BD32C2-E051-4247-826B-C7D10FADE2F9}
+		{E4499BB4-66BD-4529-9E85-A0C04FA3E400} = {1352B368-A9C1-44BB-8CAB-5399A7E07337}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {86EA6914-42DC-4EB2-9070-5A41AABC6498}

@@ -11,4 +11,3 @@ D:\IRIS_PRJ\WalletMobiFonePay\AuthService\AuthService\AuthService.Infrastructure
 D:\IRIS_PRJ\WalletMobiFonePay\AuthService\AuthService\AuthService.Infrastructure\obj\Debug\net6.0\ref\AuthService.Infrastructure.dll
 D:\IRIS_PRJ\WalletMobiFonePay\AuthService\AuthService\AuthService.Infrastructure\obj\Debug\net6.0\AuthService.Infrastructure.pdb
 D:\IRIS_PRJ\WalletMobiFonePay\AuthService\AuthService\AuthService.Infrastructure\obj\Debug\net6.0\AuthService.Infrastructure.genruntimeconfig.cache
-D:\IRIS_PRJ\WalletMobiFonePay\AuthService\AuthService\AuthService.Infrastructure\obj\Debug\net6.0\AuthService.Infrastructure.csproj.AssemblyReference.cache

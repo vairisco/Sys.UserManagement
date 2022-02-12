@@ -58,21 +58,38 @@ builder.Services.AddIdentity<User, Role>(opt =>
 })
     .AddEntityFrameworkStores<AppIdentityDbContext>()
     .AddDefaultTokenProviders();
-
-
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+builder.Services.AddAuthentication(
+    x =>
+    {
+        x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+        x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    })
+    .AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, options =>
 {
+    options.SaveToken = true;
+    options.RequireHttpsMetadata = false;
     options.TokenValidationParameters = new TokenValidationParameters
     {
-        ValidateIssuer = true, // Validate the server information that generates the JWT
-        ValidateAudience = true, // Validate the receiver of JWT (client) is authorized to receive
-        ValidateLifetime = true, // Check JWT expiration
-        ValidateIssuerSigningKey = true, // Check signature of the JWT
-        ValidIssuer = builder.Configuration.GetConnectionString("Jwt:ValidIssuer"),
-        ValidAudience = builder.Configuration.GetConnectionString("Jwt:ValidAudience"),
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration.GetConnectionString("Jwt:Key")))
+        //ValidateIssuer = true, // Validate the server information that generates the JWT
+        //ValidateAudience = true, // Validate the receiver of JWT (client) is authorized to receive
+        //ValidateLifetime = true, // Check JWT expiration
+        //ValidateIssuerSigningKey = true, // Check signature of the JWT
+        //ValidIssuer = builder.Configuration.GetSection("Jwt:ValidIssuer").Value.ToString(),
+        //ValidAudience = builder.Configuration.GetSection("Jwt:ValidAudience").Value.ToString(),
+        //IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration.GetSection("Jwt:Key").Value.ToString())),
+        //LifetimeValidator = CustomLifetimeValidator,
+        // Ensure the token was issued by a trusted authorization server (default true)
+        ValidateLifetime = true,
+        ClockSkew = TimeSpan.Zero,
+        ValidateIssuerSigningKey = true,
+        ValidateAudience = false,
+        ValidAudience = builder.Configuration.GetSection("Jwt:ValidAudience").Value.ToString(),
+        ValidateIssuer = false,
+        ValidIssuer = builder.Configuration.GetSection("Jwt:ValidIssuer").Value.ToString(),
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration.GetSection("Jwt:Key").Value.ToString())) //Secret
     };
 });
+builder.Services.AddAuthorization();
 builder.Services.Configure<IdentityOptions>(options =>
 {
     // Password settings.
@@ -116,6 +133,9 @@ app.UseSwaggerUI(c =>
 });
 
 app.UseCors("CorsPolicy");
+app.UseRouting();
+app.UseAuthentication();
+app.UseAuthorization();
 
 // Configure the HTTP request pipeline.
 app.MapGrpcService<AuthProtoService>();

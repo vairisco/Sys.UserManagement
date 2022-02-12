@@ -13,6 +13,8 @@ using System.Data.Entity;
 using AuthService.Repositories.Interface;
 using AuthService.Infrastructure.Data.Identity;
 using AutoMapper;
+using AuthService.Constants;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AuthService.Services
 {
@@ -219,8 +221,9 @@ namespace AuthService.Services
                 return responseModel;
             }
         }
-
+        
         // GetTreeRoles
+        [Authorize(Roles = "Link")]
         public override async Task<TreeRolesResponseModel> GetTreeRoles(RequestModel requestModel, ServerCallContext context)
         {
             try
