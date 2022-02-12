@@ -1,0 +1,86 @@
+syntax = "proto3";
+
+option csharp_namespace = "AuthService";
+
+package authservice;
+
+import "Protos/google/api/annotations.proto";
+import "google/protobuf/wrappers.proto";
+
+service Auth {
+
+  rpc RegisterUser (RequestModel) returns (RegisterResponseModel) {
+    option (google.api.http) = {
+      post: "/register",
+      body: "*"
+    };
+  }
+  rpc LoginUser (RequestModel) returns (LoginResponseModel) {
+    option (google.api.http) = {
+      post: "/login",
+      body: "*"
+    };
+  }
+
+  rpc UpdateRoleUser (RequestModel) returns (UpdateRoleResponseModel) {
+    option (google.api.http) = {
+      post: "/UpdateRole",
+      body: "*"
+    };
+  }
+
+  rpc GetTreeRoles (RequestModel) returns (TreeRolesResponseModel) {
+    option (google.api.http) = {
+      post: "/GetTreeRoles",
+      body: "*"
+    };
+  }
+
+}
+
+message RequestModel {
+    string Data = 1;
+}
+
+message TreeRolesResponseModel {
+    TreeRolesModel Data = 1;
+    bool Error = 2;
+    string Message = 3;
+}
+
+message TreeRolesModel {
+    repeated NodeRole Children = 1;
+}
+
+message NodeRole { 
+    string Title = 1;
+    string Value = 2;
+    string Key = 3;
+    repeated NodeRole Children = 4;
+}
+
+message AddNewRoleResponseModel {
+    bool Error = 1;
+    string Message = 2;
+}
+
+message UpdateRoleResponseModel {
+    bool Error = 1;
+    string Message = 2;
+}
+
+message RegisterResponseModel {
+    bool Error = 1;
+    string Message = 2;
+}
+
+message LoginResponseModel {
+    UserLoginModel Data = 1;
+    bool Error = 2;
+    string Message = 3;
+}
+
+message UserLoginModel {
+    string Token = 1;
+    string Username = 2;
+}

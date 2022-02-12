@@ -1,0 +1,14 @@
+D:\IRIS_PRJ\WalletMobiFonePay\AuthService\AuthService\AuthService.Infrastructure\bin\Debug\net6.0\AuthService.Infrastructure.deps.json
+D:\IRIS_PRJ\WalletMobiFonePay\AuthService\AuthService\AuthService.Infrastructure\bin\Debug\net6.0\AuthService.Infrastructure.runtimeconfig.json
+D:\IRIS_PRJ\WalletMobiFonePay\AuthService\AuthService\AuthService.Infrastructure\bin\Debug\net6.0\AuthService.Infrastructure.dll
+D:\IRIS_PRJ\WalletMobiFonePay\AuthService\AuthService\AuthService.Infrastructure\bin\Debug\net6.0\ref\AuthService.Infrastructure.dll
+D:\IRIS_PRJ\WalletMobiFonePay\AuthService\AuthService\AuthService.Infrastructure\bin\Debug\net6.0\AuthService.Infrastructure.pdb
+D:\IRIS_PRJ\WalletMobiFonePay\AuthService\AuthService\AuthService.Infrastructure\obj\Debug\net6.0\AuthService.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\IRIS_PRJ\WalletMobiFonePay\AuthService\AuthService\AuthService.Infrastructure\obj\Debug\net6.0\AuthService.Infrastructure.AssemblyInfoInputs.cache
+D:\IRIS_PRJ\WalletMobiFonePay\AuthService\AuthService\AuthService.Infrastructure\obj\Debug\net6.0\AuthService.Infrastructure.AssemblyInfo.cs
+D:\IRIS_PRJ\WalletMobiFonePay\AuthService\AuthService\AuthService.Infrastructure\obj\Debug\net6.0\AuthService.Infrastructure.csproj.CoreCompileInputs.cache
+D:\IRIS_PRJ\WalletMobiFonePay\AuthService\AuthService\AuthService.Infrastructure\obj\Debug\net6.0\AuthService.Infrastructure.dll
+D:\IRIS_PRJ\WalletMobiFonePay\AuthService\AuthService\AuthService.Infrastructure\obj\Debug\net6.0\ref\AuthService.Infrastructure.dll
+D:\IRIS_PRJ\WalletMobiFonePay\AuthService\AuthService\AuthService.Infrastructure\obj\Debug\net6.0\AuthService.Infrastructure.pdb
+D:\IRIS_PRJ\WalletMobiFonePay\AuthService\AuthService\AuthService.Infrastructure\obj\Debug\net6.0\AuthService.Infrastructure.genruntimeconfig.cache
+D:\IRIS_PRJ\WalletMobiFonePay\AuthService\AuthService\AuthService.Infrastructure\obj\Debug\net6.0\AuthService.Infrastructure.csproj.AssemblyReference.cache
